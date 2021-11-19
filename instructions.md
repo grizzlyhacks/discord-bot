@@ -2,29 +2,6 @@
 
 this is a step-by-step guide for setting up a discord bot using this repo.
 
-## replit
-
-as an alternative to installing python and downloading the code, you can simply
-visit this repository's [replit](https://replit.com/@shitchell/discord-bot).
-replit.com is essentially a cloud based IDE. to use the bot on replit:
-
-1. follow the below instructions to get a bot token
-2. create a replit account
-3. visit the [bot replit](https://replit.com/@shitchell/discord-bot)
-4. click the `Fork repl` button  
-![image](https://user-images.githubusercontent.com/621412/142602403-34bcabe6-4b66-42b4-ab65-091d5cfbe7bb.png)
-5. on the left side of your new replit, go to the *Secrets* tab  
-![image](https://user-images.githubusercontent.com/621412/142602690-86ef8a6b-b82e-48db-8906-7c9e8eb22349.png)
-6. add a new "secret" with the name `BOT_TOKEN` and paste your bot token for the value  
-![image](https://user-images.githubusercontent.com/621412/142602892-62da47aa-77f5-4eaa-ab75-1cb8a0788e55.png)
-7. click `Run`!
-
-### caveat
-
-replit.com doesn't allow you to run programs long-term without a paid subscription.
-if you want to leave the bot running, you'll have to follow the below
-instructions to set up python and run it on your personal computer
-
 ## install python
 
 python comes pre-installed on mac and most linux distributions, but the
@@ -55,6 +32,30 @@ on the main repo page, click the `Code` button and select "Download ZIP". once
 the download completes, unzip the archive
 
 ![image](https://user-images.githubusercontent.com/621412/142582301-08e7a1aa-8000-4465-a7e4-029939b4d0e0.png)
+
+## alternative: replit
+
+as an alternative to installing python and downloading the code, you can simply
+visit this repository's [replit](https://replit.com/@shitchell/discord-bot).
+[replit.com](https://replit.com/) is essentially a cloud based IDE. to use the
+bot on replit:
+
+1. follow the below instructions to get a bot token
+2. create a replit account
+3. visit the [bot replit](https://replit.com/@shitchell/discord-bot)
+4. click the `Fork repl` button  
+![image](https://user-images.githubusercontent.com/621412/142602403-34bcabe6-4b66-42b4-ab65-091d5cfbe7bb.png)
+5. on the left side of your new replit, go to the *Secrets* tab  
+![image](https://user-images.githubusercontent.com/621412/142602690-86ef8a6b-b82e-48db-8906-7c9e8eb22349.png)
+6. add a new "secret" with the name `BOT_TOKEN` and paste your bot token for the value  
+![image](https://user-images.githubusercontent.com/621412/142602892-62da47aa-77f5-4eaa-ab75-1cb8a0788e55.png)
+7. click `Run`!
+
+### caveat
+
+replit.com doesn't allow you to run programs long-term without a paid subscription.
+if you want to leave the bot running, you'll have to follow the below
+instructions to set up python and run it on your personal computer
 
 ## get a bot token
 
@@ -191,3 +192,13 @@ method of writing commands that involves separating them into separate files in
 a specific folder. this makes it easy to google `discord.py bot cogs` and find
 loads of examples that you can drag and drop into your folder and/or modify to
 suit your needs. happy coding!
+
+### resources
+
+`py-cord` python discord library:  
+https://docs.pycord.dev/en/master/api.html  
+https://github.com/Pycord-Development/pycord
+
+more example cogs:  
+[advanced help command: gist/1c7060a14a9d94e7929aa2ef14c41bc2](https://gist.github.com/nonchris/1c7060a14a9d94e7929aa2ef14c41bc2)  
+[miscellaneous cogs: gist/d78c061a4798ae81be9825468fe146be](https://gist.github.com/EvieePy/d78c061a4798ae81be9825468fe146be)
