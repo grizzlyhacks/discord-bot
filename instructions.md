@@ -19,6 +19,12 @@ replit.com is essentially a cloud based IDE. to use the bot on replit:
 ![image](https://user-images.githubusercontent.com/621412/142602892-62da47aa-77f5-4eaa-ab75-1cb8a0788e55.png)
 7. click `Run`!
 
+### caveat
+
+replit.com doesn't allow you to run programs long-term without a paid subscription.
+if you want to leave the bot running, you'll have to follow the below
+instructions to set up python and run it on your personal computer
+
 ## install python
 
 python comes pre-installed on mac and most linux distributions, but the
