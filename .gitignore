@@ -1,2 +1,4 @@
 settings.py
 .python-version
+__pycache__/
+**/*.pyc
