@@ -97,10 +97,11 @@ a file named *settings-example.py*. rename this file to *settings.py* and open
 it in the editor of your choice. you should see a line that reads:
 
 ```py
-token = 'YOUR BOT TOKEN HERE'
+#token = 'YOUR BOT TOKEN HERE'
 ```
 
-edit this line by replacing the text with your bot token, e.g.:
+uncomment the line by deleting the `#` in the beginning and then replace the
+text with your bot token, e.g.:
 
 ```py
 token = 'abc123def456'
