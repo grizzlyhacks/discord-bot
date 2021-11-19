@@ -11,7 +11,11 @@ running an up-to-date version of python
 ### windows | mac
 
 go to [python.org/downloads](https://www.python.org/downloads/) and download
-the version for your system
+the version for your system. use the default settings save for one exception:
+on windows, be sure to check the *Add Python to PATH* option during
+installation  
+![image](https://user-images.githubusercontent.com/621412/142649557-c534cc2a-96d6-497c-9cbc-54e9ff1ae5c6.png)
+
 
 ### *nix
 
@@ -26,6 +30,21 @@ sudo dnf install python3
 sudo yum install python
 ```
 
+## install pycord
+
+[`pycord`](https://github.com/Pycord-Development/pycord) is the most recent,
+actively updated python discord library. install it with pip:
+
+```shell
+pip install py-cord
+```
+
+or for voice channel support:
+
+```shell
+pip install py-cord[voice]
+```
+
 ## download the code
 
 on the main repo page, click the `Code` button and select "Download ZIP". once
@@ -35,14 +54,14 @@ the download completes, unzip the archive
 
 ## alternative: replit
 
-as an alternative to installing python and downloading the code, you can simply
-visit this repository's [replit](https://replit.com/@shitchell/discord-bot).
-[replit.com](https://replit.com/) is essentially a cloud based IDE. to use the
-bot on replit:
+replit.com is essentially a cloud based IDE. through it, you can copy the
+project, edit it, and run the code all from your webbrowser. if you'd prefer to
+run the bot on your own computer, feel free to skip this section. to use replit,
+follow these steps:
 
 1. follow the below instructions to get a bot token
 2. create a replit account
-3. visit the [bot replit](https://replit.com/@shitchell/discord-bot)
+3. visit the [bot's replit](https://replit.com/@shitchell/discord-bot)
 4. click the `Fork repl` button  
 ![image](https://user-images.githubusercontent.com/621412/142602403-34bcabe6-4b66-42b4-ab65-091d5cfbe7bb.png)
 5. on the left side of your new replit, go to the *Secrets* tab  
@@ -53,9 +72,11 @@ bot on replit:
 
 ### caveat
 
-replit.com doesn't allow you to run programs long-term without a paid subscription.
-if you want to leave the bot running, you'll have to follow the below
-instructions to set up python and run it on your personal computer
+--------------------------------------------------------------------------------
+
+replit.com doesn't allow you to run programs long-term without a paid
+subscription. if you want to leave the bot running, you'll have to set up python
+and run it on your personal computer
 
 ## get a bot token
 
@@ -189,9 +210,36 @@ drop the bot folder from your desktop onto the terminal after typing `cd `
 
 and be sure to add some commands 🙂 this bot implementation uses *cogs*, a
 method of writing commands that involves separating them into separate files in
-a specific folder. this makes it easy to google `discord.py bot cogs` and find
-loads of examples that you can drag and drop into your folder and/or modify to
-suit your needs. happy coding!
+a specific folder. in this project, that's the `cogs/` folder. each *cog*
+follows the following structure:
+
+```py
+import discord
+from discord.ext import commands
+
+# You can change 'Fun' to anything.
+class Fun(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+    @commands.command()
+    async def hello(self, ctx):
+        """make the bot say hello"""
+        await ctx.send("hello")
+
+def setup(client):
+    client.add_cog(Fun(client))
+```
+`Fun` can be anything you choose but should describe the category of commands
+included in the file. for each command itself, the function name (in this case
+`def hello()` defines the command name. the text inside of the`"""triple
+quotes"""` is the syntax python uses for documenting functions & classes, and
+it's used to set the help text for your bot's commands.
+
+--------------------------------------------------------------------------------
+there are several example cogs provided, and there are a plethora of cogs you
+can find on google and github! search `discord.py bot cogs` to find more
+examples for inspiration and guidance with your own bot commands. happy coding!
 
 ### resources
 
