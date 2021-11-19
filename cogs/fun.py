@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+import random
+
 # You can change 'Fun' to anything.
 class Fun(commands.Cog):
     def __init__(self, client):
@@ -13,6 +15,7 @@ class Fun(commands.Cog):
         await ctx.send(rancoin)
 
 def setup(client):
-    client.add_cog(Fun(client)) # Remember based on which name you assigned your class for,
-                        # It should be used at the end of the setup function right.
-                        # eg:- client.add_cog(x(client)), client.add_cog(y(client)), client.add_cog(z(client))
+    client.add_cog(Fun(client))
+# Remember based on which name you assigned your class for,
+# It should be used at the end of the setup function right.
+# eg:- client.add_cog(x(client)), client.add_cog(y(client)), client.add_cog(z(client))

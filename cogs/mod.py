@@ -20,6 +20,7 @@ class Moderation(commands.Cog):
             await ctx.send(f'{(ctx.message.author.mention)} User is not defined.')
 
 def setup(client):
-    client.add_cog(Moderation(client)) # Remember based on which name you assigned your class for,
-                        # It should be used at the end of the setup function right.
-                        # eg:- client.add_cog(x(client)), client.add_cog(y(client)), client.add_cog(z(client))
+    client.add_cog(Moderation(client))
+# Remember based on which name you assigned your class for,
+# It should be used at the end of the setup function right.
+# eg:- client.add_cog(x(client)), client.add_cog(y(client)), client.add_cog(z(client))

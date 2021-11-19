@@ -8,9 +8,10 @@ class Misc(commands.Cog):
 
     @commands.command(aliases=['latency'])
     async def ping(self, ctx):
-        await ctx.send(f'**Pong! ``{round(client.latency * 1000)}ms``**')
+        await ctx.send(f'**Pong! ``{round(self.client.latency * 1000)}ms``**')
 
 def setup(client):
-    client.add_cog(Misc(client)) # Remember based on which name you assigned your class for,
-                        # It should be used at the end of the setup function right.
-                        # eg:- client.add_cog(x(client)), client.add_cog(y(client)), client.add_cog(z(client))
+    client.add_cog(Misc(client))
+# Remember based on which name you assigned your class for,
+# It should be used at the end of the setup function right.
+# eg:- client.add_cog(x(client)), client.add_cog(y(client)), client.add_cog(z(client))
