@@ -18,6 +18,12 @@ class Moderation(commands.Cog):
         if isinstance(error, commands.MissingRequiredArgument):
             # You can customize what is said by the bot in the f strings:
             await ctx.send(f'{(ctx.message.author.mention)} User is not defined.')
+        elif isinstance(error, commands.errors.MemberNotFound):
+            await ctx.send(f'Member not found in this server')
+        elif isinstance(error, commands.errors.CommandInvokeError):
+            await ctx.send(f'i cannot ban :slight_frown:')
+        else:
+            await ctx.send(f'Error: {type(error)}: {error}')
 
 def setup(client):
     client.add_cog(Moderation(client)) # Remember based on which name you assigned your class for,
