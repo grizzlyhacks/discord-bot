@@ -11,11 +11,11 @@ replit.com is essentially a cloud based IDE. to use the bot on replit:
 1. follow the below instructions to get a bot token
 2. create a replit account
 3. visit the [bot replit](https://replit.com/@shitchell/discord-bot)
-4. click the `Fork repl` button
+4. click the `Fork repl` button  
 ![image](https://user-images.githubusercontent.com/621412/142602403-34bcabe6-4b66-42b4-ab65-091d5cfbe7bb.png)
-5. on the left side of your new replit, go to the *Secrets* tab
+5. on the left side of your new replit, go to the *Secrets* tab  
 ![image](https://user-images.githubusercontent.com/621412/142602690-86ef8a6b-b82e-48db-8906-7c9e8eb22349.png)
-6. add a new "secret" with the name `BOT_TOKEN` and paste your bot token for the value
+6. add a new "secret" with the name `BOT_TOKEN` and paste your bot token for the value  
 ![image](https://user-images.githubusercontent.com/621412/142602892-62da47aa-77f5-4eaa-ab75-1cb8a0788e55.png)
 7. click `Run`!
 
