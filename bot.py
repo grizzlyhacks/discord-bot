@@ -1,15 +1,17 @@
+import os
+import settings
 import discord
 from discord.ext import commands
 
-TOKEN = 'YOUR BOT TOKEN'
-PREFIX = ['BOT PREFIX']
+TOKEN = os.environ.get("BOT_TOKEN") or settings.token
+PREFIX = os.environ.get("BOT_PREFIX") or settings.prefix
 
 client = commands.Bot(command_prefix = PREFIX)
-client.remove_command("help")
+# client.remove_command("help")
 
-cogs = ['cogs.fun', 'cogs.mod', 'cogs.misc'] # 'cogs' signifies the name of the folder, 'x' signifies the file name.
-
-activity_status = "YOUR BOT ACTIVITY"
+# 'cogs' is the folder name
+# 'fun', 'mod', and 'misc' are the file names
+cogs = ['cogs.fun', 'cogs.mod', 'cogs.misc', 'cogs.events']
 
 @client.event
 async def on_ready():
