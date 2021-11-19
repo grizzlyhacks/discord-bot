@@ -1,13 +1,8 @@
-import os
-import settings
 import discord
 from discord.ext import commands
+from settings_loader import prefix, token
 
-TOKEN = os.environ.get("BOT_TOKEN") or settings.token
-PREFIX = os.environ.get("BOT_PREFIX") or settings.prefix
-
-client = commands.Bot(command_prefix = PREFIX)
-# client.remove_command("help")
+client = commands.Bot(command_prefix = prefix)
 
 # 'cogs' is the folder name
 # 'fun', 'mod', and 'misc' are the file names
@@ -22,4 +17,4 @@ async def on_ready():
         client.load_extension(cog) # Loads the cogs.
     return
 
-client.run(TOKEN)
+client.run(token)
