@@ -6,7 +6,7 @@ client = commands.Bot(command_prefix = prefix)
 
 # 'cogs' is the folder name
 # 'fun', 'mod', and 'misc' are the file names
-cogs = ['cogs.fun', 'cogs.mod', 'cogs.misc']
+cogs = ['cogs.fun', 'cogs.mod', 'cogs.misc', 'cogs.events']
 
 @client.event
 async def on_ready():
